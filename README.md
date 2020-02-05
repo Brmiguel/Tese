@@ -35,3 +35,12 @@ sudo apt install g++
 - $ export PATH=/opt/pgi/linux86-64/19.4/bin:$PATH;
 - $ export MANPATH=$MANPATH:/opt/pgi/linux86-64/19.4/man;
 
+
+## Compiling code without parallelization
+
+pgfortran diffraction_nompi.f90 -o diffraction_nompi -I/usr/local/include -lfftw3_threads -lfftw3 -lm  -lcfitsio -lnsl -L/lib/x86_64-linux-gnu
+
+
+## Compiling code without parallelization
+
+pgfortran diffraction_nompi.f90 -o diffraction_nompi -I/usr/local/include -lfftw3_threads -lfftw3 -lm  -lcfitsio -lnsl -L/lib/x86_64-linux-gnu -fast -ta=multicore
