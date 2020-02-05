@@ -41,6 +41,6 @@ sudo apt install g++
 pgfortran diffraction_nompi.f90 -o diffraction_nompi -I/usr/local/include -lfftw3_threads -lfftw3 -lm  -lcfitsio -lnsl -L/lib/x86_64-linux-gnu
 
 
-## Compiling code without parallelization
+## Compiling code with parallelization
 
 pgfortran diffraction_nompi.f90 -o diffraction_nompi -I/usr/local/include -lfftw3_threads -lfftw3 -lm  -lcfitsio -lnsl -L/lib/x86_64-linux-gnu -fast -ta="multicore"
