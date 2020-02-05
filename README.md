@@ -43,4 +43,4 @@ pgfortran diffraction_nompi.f90 -o diffraction_nompi -I/usr/local/include -lfftw
 
 ## Compiling code without parallelization
 
-pgfortran diffraction_nompi.f90 -o diffraction_nompi -I/usr/local/include -lfftw3_threads -lfftw3 -lm  -lcfitsio -lnsl -L/lib/x86_64-linux-gnu -fast -ta=multicore
+pgfortran diffraction_nompi.f90 -o diffraction_nompi -I/usr/local/include -lfftw3_threads -lfftw3 -lm  -lcfitsio -lnsl -L/lib/x86_64-linux-gnu -fast -ta="multicore"
